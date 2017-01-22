@@ -4,6 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import com.epam.m6w1.Choclate;
 
+import static com.epam.m6w1.Candy.Taste.CLASSIC;
+import static com.epam.m6w1.Candy.Taste.HONEY;
+import static com.epam.m6w1.Candy.Taste.MENTHOL;
+
 public class TestOrder {
 
     private Order order;
@@ -35,6 +39,17 @@ public class TestOrder {
         order.addItem(choclate, 2);
         int totalPrice = order.getTotalPrice();
         Assert.assertEquals(totalPrice, 420);
+    }
+
+    @Test(dataProvider = "itemFeeder")
+    public void testCreateCandy(String name, int quantaty, int price, Candy.Taste taste) {
+        Candy candy = new Candy("Cukor", 1, 200, MENTHOL);
+
+    }
+
+    @DataProvider (name = "itemFeeder")
+    public Object [][] fedder() {
+        return new Object [][] {{"Cukor1", 1, 100, MENTHOL}, {"Cukor2", 2, 200, HONEY}, {"Cukor3", 3, 300, CLASSIC}};
     }
 
 
