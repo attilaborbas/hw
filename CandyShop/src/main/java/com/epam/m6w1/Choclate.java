@@ -1,4 +1,4 @@
-package com.epam;
+package com.epam.m6w1;
 
 public class Choclate extends Gifts {
     private enum ChoclateType {DARK,MILK,WHITE};

@@ -1,6 +1,6 @@
-package com.epam;
+package com.epam.m6w1;
 
-public class Candy extends Gifts {
+public class Candy extends com.epam.m6w1.Gifts {
     private enum Taste {HONEY,MENTHOL,CLASSIC};
     private Taste taste = Taste.CLASSIC;
 

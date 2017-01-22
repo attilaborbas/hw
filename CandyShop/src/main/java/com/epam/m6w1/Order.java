@@ -1,4 +1,4 @@
-package com.epam;
+package com.epam.m6w1;
 
 import java.util.ArrayList;
 

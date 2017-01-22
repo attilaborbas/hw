@@ -1,4 +1,4 @@
-package com.epam;
+package com.epam.m6w1;
 
 public abstract class Gifts {
     private String name;
